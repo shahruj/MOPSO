@@ -54,7 +54,7 @@ class Particle:
         temp=[]
         self.cost = 0
         for i in range(0,self.dimension): #fills up temp with the position parameters of the particle to be evaluated
-            temp.append((self.position_i[i]- bounds[i][0])/(bounds[i][1] - bounds[i][0]))
+            temp.append((self.position_i[i]- bounds[i][0])/(bounds[i][1] - bounds[i][0]))#normalizes the variable as model takes in normalised values 
             self.cost = self.cost + (self.position_i[i]*price[i]) #finds the cost of the position being evaluated and updates individual cost of the position
         self.value_i=evaluate_position(temp) #updates the value(UCS) of the position returned by the model according to input position      
         if (self.value_i>self.bestvalue_i and self.cost<self.bestcost or self.bestvalue_i == -1): #checks if the current cost and value dominates the personal best (cost and value)
