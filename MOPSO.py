@@ -17,7 +17,6 @@ import pickle
 import random 
 #model1 = pickle.load(open("model.dat", "rb"))
 model2 = keras.models.load_model('my_model_2')
-#model = pickle.load(open("model.dat", "rb"))
 
 #function returns the output of the model when passed in a particle's parameters 
 def evaluate_position(temp):
